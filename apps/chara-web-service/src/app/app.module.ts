@@ -2,18 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
-import { SharedUiModule } from '@stores/shared-ui';
-import { HeaderModule } from '@stores/header';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent],
   imports: [
     BrowserModule,
-    RouterModule,
-    SharedUiModule,
-    HeaderModule,
+    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
   ],
   providers: [],
   bootstrap: [AppComponent],

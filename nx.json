@@ -27,12 +27,25 @@
     ]
   },
   "projects": {
+    "chara-web-service": {
+      "tags": ["application"]
+    },
+    "chara-web-service-e2e": {
+      "tags": [],
+      "implicitDependencies": ["chara-web-service"]
+    },
+    "header": {
+      "tags": []
+    },
     "nx-stores": {
       "tags": []
     },
     "nx-stores-e2e": {
       "tags": [],
       "implicitDependencies": ["nx-stores"]
+    },
+    "shared-ui": {
+      "tags": []
     }
   }
 }
