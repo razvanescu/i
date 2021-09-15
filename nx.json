@@ -34,11 +34,8 @@
       "tags": [],
       "implicitDependencies": ["chara-web-service"]
     },
-    "header": {
-      "tags": []
-    },
     "nx-stores": {
-      "tags": []
+      "tags": ["application"]
     },
     "nx-stores-e2e": {
       "tags": [],

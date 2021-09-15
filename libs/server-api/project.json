@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/server-api",
+  "sourceRoot": "libs/server-api/src",
+  "prefix": "",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/server-api"],
+      "options": {
+        "jestConfig": "libs/server-api/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/server-api/src/**/*.ts",
+          "libs/server-api/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["library"]
+}

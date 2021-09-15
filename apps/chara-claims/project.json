@@ -1,0 +1,97 @@
+{
+  "projectType": "application",
+  "root": "apps/chara-claims",
+  "sourceRoot": "apps/chara-claims/src",
+  "prefix": "stores",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/chara-claims",
+        "index": "apps/chara-claims/src/index.html",
+        "main": "apps/chara-claims/src/main.ts",
+        "polyfills": "apps/chara-claims/src/polyfills.ts",
+        "tsConfig": "apps/chara-claims/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/chara-claims/src/favicon.ico",
+          "apps/chara-claims/src/assets"
+        ],
+        "styles": ["apps/chara-claims/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/chara-claims/src/environments/environment.ts",
+              "with": "apps/chara-claims/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "chara-claims:build:production"
+        },
+        "development": {
+          "browserTarget": "chara-claims:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/chara-claims/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "chara-claims:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/chara-claims/src/**/*.ts",
+          "apps/chara-claims/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/chara-claims"],
+      "options": {
+        "jestConfig": "apps/chara-claims/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

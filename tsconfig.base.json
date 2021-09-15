@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@stores/header": ["libs/header/src/index.ts"],
+      "@stores/server-api": ["libs/server-api/src/index.ts"],
       "@stores/shared-ui": ["libs/shared-ui/src/index.ts"]
     }
   },

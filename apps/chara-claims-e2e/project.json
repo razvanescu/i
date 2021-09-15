@@ -1,0 +1,28 @@
+{
+  "root": "apps/chara-claims-e2e",
+  "sourceRoot": "apps/chara-claims-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/chara-claims-e2e/cypress.json",
+        "devServerTarget": "chara-claims:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "chara-claims:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/chara-claims-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["chara-claims"]
+}
