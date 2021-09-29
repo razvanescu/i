@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { SharedUiModule } from '@stores/shared-ui';
-import { HeaderModule } from '@stores/header';
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent],
@@ -13,7 +12,6 @@ import { HeaderModule } from '@stores/header';
     BrowserModule,
     RouterModule,
     SharedUiModule,
-    HeaderModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

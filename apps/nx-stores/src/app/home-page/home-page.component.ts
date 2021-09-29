@@ -10,6 +10,10 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const t = 1;
+    if(t == 2) {
+      console.log('info');
+    }
   }
 
 }

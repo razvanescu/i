@@ -8,10 +8,15 @@
         "plugin:@nrwl/nx/angular",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
+      // We set parserOptions.project for the project to allow TypeScript to create the type-checker behind the scenes when we run linting
+      "parserOptions": {
+        "project": ["./tsconfig.*?.json"]
+      },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
           {
+            "prefix": "lib",
             "type": "attribute",
             "style": "camelCase"
           }
@@ -19,10 +24,13 @@
         "@angular-eslint/component-selector": [
           "error",
           {
+            "prefix": "lib",
             "type": "element",
             "style": "kebab-case"
           }
-        ]
+        ],
+        // This rule requires the TypeScript type checker to be present when it runs
+        "@typescript-eslint/await-thenable": "error"
       }
     },
     {
