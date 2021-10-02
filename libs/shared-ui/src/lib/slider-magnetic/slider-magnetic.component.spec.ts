@@ -8,9 +8,8 @@ describe('SliderMagneticComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SliderMagneticComponent ]
-    })
-    .compileComponents();
+      declarations: [SliderMagneticComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

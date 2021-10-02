@@ -6,15 +6,7 @@ import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [
-    SliderMagneticComponent,
-    FooterComponent,
-    HeaderComponent
-  ],
-  exports: [
-    SliderMagneticComponent,
-    FooterComponent,
-    HeaderComponent
-  ]
+  declarations: [SliderMagneticComponent, FooterComponent, HeaderComponent],
+  exports: [SliderMagneticComponent, FooterComponent, HeaderComponent],
 })
 export class SharedUiModule {}

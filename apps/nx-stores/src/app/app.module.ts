@@ -8,11 +8,7 @@ import { SharedUiModule } from '@stores/shared-ui';
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    SharedUiModule,
-  ],
+  imports: [BrowserModule, RouterModule, SharedUiModule],
   providers: [],
   bootstrap: [AppComponent],
 })

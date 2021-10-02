@@ -3,10 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'store-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-
   headerSize: number;
 
   constructor() {
@@ -16,5 +15,4 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.headerSize = 20;
   }
-
 }

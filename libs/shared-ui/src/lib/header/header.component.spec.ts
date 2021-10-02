@@ -8,9 +8,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [HeaderComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -26,5 +25,4 @@ describe('HeaderComponent', () => {
   it('should create component2', () => {
     expect(component).toBeTruthy();
   });
-
 });

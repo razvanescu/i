@@ -7,7 +7,9 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "format:write": "nx format:srite",
+    "lint-staged": "npx lint-staged"
   },
   "private": true,
   "dependencies": {
@@ -47,10 +49,29 @@
     "eslint": "7.22.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "husky": "^7.0.2",
     "jest": "27.0.3",
     "jest-preset-angular": "9.0.7",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.1",
     "ts-jest": "27.0.3",
     "typescript": "~4.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,scss,md,ts,html,graphql}": [
+      "nx format --uncommitted"
+    ]
+  },
+  "lint-staged-2": {
+    "*.{js,json,css,scss,md,ts,html,graphql}": [
+      "npx nx run affected:test --uncommitted",
+      "nx format --uncommitted"
+    ]
   }
 }
