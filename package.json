@@ -9,7 +9,8 @@
     "build": "nx build",
     "test": "nx test",
     "format:write": "nx format:srite",
-    "lint-staged": "npx lint-staged"
+    "lint-staged": "npx lint-staged",
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {
@@ -60,7 +61,8 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "nx test"
     }
   },
   "lint-staged": {
