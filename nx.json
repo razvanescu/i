@@ -36,6 +36,9 @@
       "implicitDependencies": ["chara-web-service"]
     },
     "eslint-rules": {},
+    "ng-web-back": {
+      "tags": []
+    },
     "nx-stores": {
       "tags": ["application"]
     },

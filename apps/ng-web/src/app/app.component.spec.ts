@@ -16,18 +16,18 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'chara-web-service'`, () => {
+  it(`should have as title 'ng-web'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('chara-web-service');
+    expect(app.title).toEqual('ng-web');
   });
 
-  it.skip('should render title', () => {
+  it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome to chara-web-service!',
+      'Welcome to ng-web!',
     );
   });
 });

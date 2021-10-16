@@ -16,7 +16,6 @@
         "@angular-eslint/directive-selector": [
           "error",
           {
-            "prefix": "lib",
             "type": "attribute",
             "style": "camelCase"
           }
@@ -24,7 +23,6 @@
         "@angular-eslint/component-selector": [
           "error",
           {
-            "prefix": "lib",
             "type": "element",
             "style": "kebab-case"
           }
