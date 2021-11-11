@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
-import { AdAuthenticationComponent } from './ad-authentication/AdAuthenticationComponent';
+import { AdAuthenticationComponent } from './ad-authentication/ad-authentication.component';
+import { ContextComponent } from './context/context/context.component';
+import { ButtonComponent } from '../atom/button/button.component';
 
 const routes: Routes = [
   {
@@ -13,7 +15,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, AdAuthenticationComponent],
+  declarations: [
+    AppComponent,
+    AdAuthenticationComponent,
+    ContextComponent,
+    ButtonComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { initialNavigation: 'enabledBlocking' }),

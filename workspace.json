@@ -192,6 +192,8 @@
       }
     },
     "ng-web-e2e": "apps/ng-web-e2e",
+    "node-back": "apps/node-back",
+    "node-back-js": "apps/node-back-js",
     "nx-stores": {
       "projectType": "application",
       "root": "apps/nx-stores",

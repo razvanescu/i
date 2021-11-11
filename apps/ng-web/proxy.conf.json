@@ -1,8 +1,20 @@
 {
   "/api/*": {
-    "target": "http://localhost:4200/api",
+    "target": "http://localhost:3333",
     "secure": false,
     "logLevel": "debug",
-    "changeOrigin": true
+    "changeOrigin": false,
+    "pathRewrite": {
+      "^/api/settings": "/api/settings",
+      "^/api": "/api/data"
+    }
+  },
+  "/node-back-api": {
+    "target": "http://localhost:3332",
+    "secure": false
+  },
+  "/node-back-js-api": {
+    "target": "http://localhost:3331",
+    "secure": false
   }
 }
